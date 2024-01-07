@@ -36,9 +36,10 @@ def motorStop():
 def loop(itC):
     while (itC < 1):
         moveSteps(1,3,120)
-        time.sleep(60)
+        time.sleep(10)
         moveSteps(0,3,120)
-        time.sleep(60)
+        time.sleep(10)
+        print(str(itC))
         itC += 1
 
 def destroy():
