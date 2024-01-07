@@ -35,9 +35,11 @@ def motorStop():
 
 def loop(itC):
     while (itC < 10000000):
+        print("Switch Closed")
         moveSteps(1,3,120)
         time.sleep(10)
         moveSteps(0,3,120)
+        print("Switch Open")
         time.sleep(10)
         print(str(itC))
         itC += 1
