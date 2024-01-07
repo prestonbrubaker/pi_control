@@ -21,8 +21,9 @@ def loop():
         value = adc.analogRead(0)    # read the ADC value of channel 0
         voltage = value / 255.0 * 3.3  # calculate the voltage value
         time_now = time.time() - time_ref
-        print ('Time : %d, Voltage : %.2f'%(time_now,voltage))
-        time.sleep(0.1)
+        print ('Time : %.3f, Voltage : %.2f'%(time_now,voltage))
+        with open("data.txt", "a") as file:
+            file.write('Time : %.3f, Voltage : %.2f'%(time_now,voltage))
 
 def destroy():
     adc.close()
