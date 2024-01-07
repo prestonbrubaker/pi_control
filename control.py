@@ -33,9 +33,9 @@ def loop():
     itC = 0
     while itC < 10000000:
         print("Switch Closed")
-        moveSteps(1, 3, 90)
+        moveSteps(1, 3, 360)
         time.sleep(10)
-        moveSteps(0, 3, 90)
+        moveSteps(0, 3, 360)
         print("Switch Open")
         time.sleep(10)
         print(str(itC))
