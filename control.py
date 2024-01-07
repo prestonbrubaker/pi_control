@@ -34,7 +34,7 @@ def motorStop():
         GPIO.output(motorPins[i],GPIO.LOW)
 
 def loop(itC):
-    while (itC < 1):
+    while (itC < 10000000):
         moveSteps(1,3,120)
         time.sleep(10)
         moveSteps(0,3,120)
