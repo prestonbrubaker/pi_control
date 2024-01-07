@@ -23,7 +23,7 @@ def loop():
         time_now = time.time() - time_ref
         print ('Time : %.3f, Voltage : %.2f'%(time_now,voltage))
         with open("data.txt", "a") as file:
-            file.write('Time : %.3f, Voltage : %.2f'%(time_now,voltage))
+            file.write(str(time_now) + " " + str(voltage) + "\n")
 
 def destroy():
     adc.close()
